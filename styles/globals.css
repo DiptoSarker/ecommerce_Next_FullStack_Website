@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 html,
 body {
   padding: 0;
@@ -5,12 +9,58 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
-
 a {
-  color: inherit;
-  text-decoration: none;
+  color: rgb(53, 53, 205);
+}
+
+a:hover {
+  color: rgb(10, 10, 157);
 }
 
 * {
   box-sizing: border-box;
+}
+
+.card {
+  background-color: rgb(220, 220, 220);
+  border-radius: 5px;
+  box-shadow: 5px 5px 2px rgb(172, 173, 173);
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  box-shadow: 8px 8px 5px rgb(172, 173, 173);
+  transform: scale(1.008);
+}
+
+.primary-button {
+  background-color: rgb(230, 203, 31);
+  padding: 10px;
+  color: rgb(0, 0, 0);
+  border-radius: 10px;
+  font-size: large;
+}
+.primary-button:hover {
+  background-color: rgb(249, 200, 5);
+  font-weight: bold;
+}
+
+input,
+select,
+textarea {
+  border-radius: 2px;
+  border: 2px rgb(244, 244, 244) ridge;
+
+  padding: 2px;
+  outline-style: none;
+}
+
+.dropdown-link {
+  display: flex;
+  padding: 7px;
+  z-index: 999;
+}
+
+.dropdown-link:hover {
+  background-color: rgb(208, 208, 208);
 }
