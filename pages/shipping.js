@@ -4,6 +4,7 @@ import { useForm } from 'react-hook-form';
 import { Store } from '../utils/Store';
 import CheckoutWizard from './components/CheckoutWizard';
 import Layout from './components/Layout';
+import { useRouter } from 'next/router';
 
 export default function ShippingScreen() {
   const {
@@ -16,6 +17,7 @@ export default function ShippingScreen() {
   const { state, dispatch } = useContext(Store);
   const { cart } = state;
   const { shippingAddress } = cart;
+  const router = useRouter();
 
   useEffect(() => {
     setValue('fullName', shippingAddress.fullName);
@@ -43,6 +45,7 @@ export default function ShippingScreen() {
         },
       })
     );
+    router.push('/payment');
   };
 
   return (
